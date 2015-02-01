@@ -17,19 +17,128 @@ html {
 	box-sizing: inherit;
 }
 
-
 body{
-  font-family: sans-serif;
+  font-family: $raleway;
+  background-color: $background;
   @include zero;
   // Hides close button if there is no js
-  &.noscript .close-btn{
+  &.noscript .close-btn,
+  &.noscript .toggle-btn{
     display: none;
   }
+}
+
+h1 {
+  color: $brown;
+  font-size: 25px;
 }
 
 header {
   padding: 0 1em;
   position: relative;
 }
+
+.toggle-btn {
+  position: absolute;
+  left: .5em;
+  top: .25em;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+.navigation ul {
+  @include zero;
+  
+  li {
+    list-style-type: none;
+    &:first-child a{
+      border-top: 1px solid $light-grey;
+    }
+    a {
+      font-size: 13px;
+      letter-spacing: 2px;
+      display: block;
+      padding: 1em;
+      text-align: left;
+      border-bottom: 1px solid $light-grey;
+      text-decoration: none;
+      color: $text-color;
+      &:hover {
+        color: $brown;
+      }
+
+    }
+  }
+}
+
+.toggle-btn, .close-btn {
+  color: $text-color;
+  height: 40px;
+  width: 40px;
+  span {
+    @include hide-text;
+  }
+  i {
+    padding: .5em;
+  }
+}
+
+.close-btn {
+  margin-top: 2em;
+
+}
+
+@media only screen and (max-width: 100em){
+  .site-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+      .sliding-canvas {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateX(0);
+        @include ease(all, 300ms, ease-in-out);
+      }
+    &[data-state="slide-open"] .sliding-canvas {
+      transform: translateX(100%);
+    }
+
+    &[data-state="slide-open"] {
+      // allow expansion of navigation past page height when open
+      overflow: visible;
+    }
+  
+  .slide-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    }  
+
+@media only screen and (min-width: 60 em) {
+  .toggle-btn,
+  .close-btn {
+    display: none;
+  }
+}
+  }
+}
+
+body.noscript .slide-menu {
+  position: static;
+  right: auto;
+}
+
+
 
 
