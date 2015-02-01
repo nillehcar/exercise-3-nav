@@ -15,7 +15,7 @@
   }
 }
 */
-/* line 22, /Users/User/Desktop/exercise-3-starter/scss/components/push-menu-custom */
+/* line 22, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/push-menu-custom */
 [class^="i-"]:before, [class*=" i-"]:before {
   font-family: "push-menu-custom";
   font-style: normal;
@@ -40,12 +40,12 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 53, /Users/User/Desktop/exercise-3-starter/scss/components/push-menu-custom */
+/* line 53, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/push-menu-custom */
 .i-menu:before {
   content: '\e800'; }
 
 /* '' */
-/* line 54, /Users/User/Desktop/exercise-3-starter/scss/components/push-menu-custom */
+/* line 54, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/push-menu-custom */
 .i-close:before {
   content: '\e801'; }
 
@@ -70,27 +70,134 @@
   width: device-width;
   scale: 1; }
 
-/* line 7, /Users/User/Desktop/exercise-3-starter/scss/components/main */
+/* line 7, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%; }
 
-/* line 16, /Users/User/Desktop/exercise-3-starter/scss/components/main */
+/* line 16, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/* line 21, /Users/User/Desktop/exercise-3-starter/scss/components/main */
+/* line 20, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: #F2F1F1;
   margin: 0;
   padding: 0; }
-  /* line 25, /Users/User/Desktop/exercise-3-starter/scss/components/main */
-  body.noscript .close-btn {
+  /* line 26, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+  body.noscript .close-btn, body.noscript .toggle-btn {
     display: none; }
 
-/* line 30, /Users/User/Desktop/exercise-3-starter/scss/components/main */
+/* line 31, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+h1 {
+  color: #675B57;
+  font-size: 25px; }
+
+/* line 36, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
 header {
   padding: 0 1em;
   position: relative; }
+
+/* line 41, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.toggle-btn {
+  position: absolute;
+  left: 0.5em;
+  top: 0.25em; }
+
+/* line 47, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.upper {
+  text-transform: uppercase; }
+
+/* line 51, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.center {
+  text-align: center; }
+
+/* line 55, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.navigation ul {
+  margin: 0;
+  padding: 0; }
+  /* line 58, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+  .navigation ul li {
+    list-style-type: none; }
+    /* line 60, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .navigation ul li:first-child a {
+      border-top: 1px solid #ccc; }
+    /* line 63, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .navigation ul li a {
+      font-size: 13px;
+      letter-spacing: 2px;
+      display: block;
+      padding: 1em;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+      text-decoration: none;
+      color: #CCB89C; }
+      /* line 72, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+      .navigation ul li a:hover {
+        color: #675B57; }
+
+/* line 80, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.toggle-btn, .close-btn {
+  color: #CCB89C;
+  height: 40px;
+  width: 40px; }
+  /* line 84, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+  .toggle-btn span, .close-btn span {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block; }
+  /* line 87, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+  .toggle-btn i, .close-btn i {
+    padding: 0.5em; }
+
+/* line 92, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+.close-btn {
+  margin-top: 2em; }
+
+@media only screen and (max-width: 100em) {
+  /* line 98, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+  .site-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100; }
+    /* line 103, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .site-wrapper .sliding-canvas {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0);
+      transition: all 300ms ease-in-out; }
+    /* line 110, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .site-wrapper[data-state="slide-open"] .sliding-canvas {
+      -webkit-transform: translateX(100%);
+          -ms-transform: translateX(100%);
+              transform: translateX(100%); }
+    /* line 114, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .site-wrapper[data-state="slide-open"] {
+      overflow: visible; }
+    /* line 119, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+    .site-wrapper .slide-menu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 100%; }
+    @media only screen and (min-width: 60 em) {
+      /* line 130, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+      .site-wrapper .toggle-btn, .site-wrapper .close-btn {
+        display: none; }
+ }
+ }
+
+/* line 137, /Users/rachellin/Desktop/Algonquin/YEAR 3 - SEMESTER 2/2 - Web Development/exercise-3-nav/scss/components/main */
+body.noscript .slide-menu {
+  position: static;
+  right: auto; }
