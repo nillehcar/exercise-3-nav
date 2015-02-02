@@ -19,7 +19,7 @@ html {
 
 body{
   font-family: $raleway;
-  background-color: $background;
+  background: url("../images/mountains.jpg") no-repeat center fixed;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn,
@@ -31,6 +31,7 @@ body{
 h1 {
   color: $brown;
   font-size: 25px;
+  letter-spacing: 5px;
 }
 
 header {
@@ -54,19 +55,15 @@ header {
 
 .navigation ul {
   @include zero;
-  
+  width: 8em;
   li {
     list-style-type: none;
-    &:first-child a{
-      border-top: 1px solid $light-grey;
-    }
     a {
-      font-size: 13px;
+      font-size: 14px;
       letter-spacing: 2px;
       display: block;
       padding: 1em;
       text-align: left;
-      border-bottom: 1px solid $light-grey;
       text-decoration: none;
       color: $text-color;
       &:hover {
@@ -105,10 +102,10 @@ header {
         height: 100%;
         position: relative;
         transform: translateX(0);
-        @include ease(all, 300ms, ease-in-out);
+        @include ease(all, 500ms, ease-in-out);
       }
     &[data-state="slide-open"] .sliding-canvas {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
 
     &[data-state="slide-open"] {
@@ -122,7 +119,7 @@ header {
     height: 100%;
     top: 0;
     bottom: 0;
-    right: 100%;
+    left: 100%;
     }  
 
 @media only screen and (min-width: 60 em) {
